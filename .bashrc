@@ -1,0 +1,36 @@
+alias reload="source ~/.bashrc"
+
+alias ls="ls -lh --color=auto"
+alias ll="ls -lah --color=auto"
+
+# Networking
+alias wanip="curl ifconfig.me"
+lanip() {
+    ip addr | awk '/^[0-9]+:/ {iface=substr($2, 1, length($2)-1)} /link\/ether/ {mac=$2} /inet / {split($2, a, "/"); ip=a[1]; print "Interface:", iface, "\nMAC:", mac, "\nIP:", ip, "\n"}'
+}
+
+# Configuration for MacOS
+#lanip() {
+#    ifconfig | awk '/^[a-z]/ { iface=$1 } /ether/ { mac=$2 } /inet / { ip=$2; if (mac) print "Interface:", iface, "\nMAC:", mac, "\nIP:", ip, "\n"; mac="" }'
+#}
+
+# Check Applications Installed
+
+check-system(){
+	# Git
+	if ! command -v git &>/dev/null; then
+  		echo "Error: 'git' is not installed. Please install it to proceed." >&2
+	else
+		echo "'git' is installed.'" >&2
+	fi
+
+	# Python
+	if ! command -v python3 &>/dev/null; then
+		echo "Error: 'python3' is not installed. Please install it." >&2
+	else
+		if [ "$(python3 --version | head -n1 | cut -d" " -f2)" -eq 3.16.3]; then
+			echo "python3 is installed."
+		fi
+	fi
+}
+
