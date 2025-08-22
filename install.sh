@@ -1,4 +1,7 @@
 #!/bin/bash
 
-cp -v ./bashrc ~/.bashrc
-cp -rv ./nvim/ ~/.config/nvim
+cp -fv ./bashrc ~/.bashrc
+cp -fv ./zshrc ~/.zshrc
+
+mkdir -p ~/.config/nvim
+cp -frv ./nvim/ ~/.config/nvim
