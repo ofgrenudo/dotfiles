@@ -1,4 +1,19 @@
-# If you come from bash you might have to change your $PATH.
+#######################################################################
+#
+# .zshrc
+# 
+# This file is part of my .dotfiles configuration. you can find the 
+# rest # of my dotfiles at https://github.com/ofgrenudo/dotfiles. 
+# The great feature about this is the fact that I tend on always 
+# creating a Developer folder where i can reliably migrate files out 
+# of to apply to the system. 
+# 
+# To refresh the system, you will need to run the reload command. This 
+# will then kick off the install.sh script found in the developer folder.
+#
+# author: Joshua Winters-Brown
+#
+#######################################################################
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="bureau"
@@ -7,7 +22,7 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 DISABLE_MAGIC_FUNCTIONS="true"
 ENABLE_CORRECTION="true"
 
-plugins=(git)
+plugins=(git docker docker-compose golang python pylint)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -20,7 +35,10 @@ else
   export EDITOR='nvim'
 fi
 
-# Aliass
-alias reload="source ~/.zshrc"
+alias reload="sh ~/Developer/dotfiles/install.sh && source ~/.zshrc"
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
+
+#######################################################################
+# Auto-loaded content below
+#######################################################################
