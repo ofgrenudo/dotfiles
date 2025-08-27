@@ -11,4 +11,4 @@ mkdir -p ~/.config/nvim
 mkdir -p ~/.config/kitty/
 
 cp -frv ./kitty/ ~/.config/kitty/
-cp -frv ./nvim/ ~/.config/nvim
+cp -frv ./nvim/ ~/.config/
