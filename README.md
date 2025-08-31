@@ -5,7 +5,7 @@ These are my dotfiles. They pretty much consist of all my quirky features. I wil
 I would have to look into doing something like that later.... So far, I have the following
 
 - `reload` ~ applys any changes made here in this repository to the local environment
-- `wanip` ~ prints out your WIDE AREA NETWORK IP! Otherwise, your public ip.
+- `wanip` ~ prints out your WIDE AREA NETWORK IP! Otherwise known as, your public ip.
 - `lanip` ~ prints out your local IP's on all network interfaces.
 - probably more...
 
@@ -21,7 +21,7 @@ Reap the benefits.
 
 ## Modifications / Additions
 
-If you want to add or modify something in the bash commands, you will want to look for something with the .rc extension. The install script goes through, and appends any files contents that end with a .rc to the end of the `~/.zshrc` and `~/.bashrc` profile. Try to keep the contents grouped similarly into meaningful files. Im not saying it needs to be super atomized. But if soemthing later on will piss me off. I will want to know where to look at, without grepping my file system.
+If you want to add or modify something in the bash commands, you will want to look for something with the .rc extension. The install script goes through, and appends any files contents that end with a .rc to the end of the `~/.zshrc` and `~/.bashrc` profile. Try to keep the contents grouped similarly into meaningful files. Im not saying it needs to be super atomized. But if something later on will piss me off. I will want to know where to look at, without grepping my file system.
 
 Have a cat, for putting effort in for future josh.
 
