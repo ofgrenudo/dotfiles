@@ -39,6 +39,13 @@ alias reload="sh ~/Developer/dotfiles/install.sh && source ~/.zshrc"
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 
+
+export PYENV_ROOT="$HOME/.pyenv"
+
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+
+eval "$(pyenv init - bash)"
+ 
 #######################################################################
 # Auto-loaded content below
 #######################################################################

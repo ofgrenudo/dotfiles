@@ -1,14 +1,19 @@
 #!/bin/bash
 
-cp -fv ./bashrc ~/.bashrc
-cp -fv ./zshrc ~/.zshrc
+cp -fv ~/Developer/dotfiles/bashrc ~/.bashrc
+cp -fv ~/Developer/dotfiles/zshrc ~/.zshrc
 
 # append .rc files to functional files
-cat *.rc >>~/.zshrc
-cat *.rc >>~/.bashrc
+cat ~/Developer/dotfiles/*.rc >>~/.zshrc
+cat ~/Developer/dotfiles/*.rc >>~/.bashrc
 
+# config files
 mkdir -p ~/.config/nvim
 mkdir -p ~/.config/kitty/
 
-cp -frv ./kitty/ ~/.config/kitty/
-cp -frv ./nvim/ ~/.config/
+cp -frv ~/Developer/dotfiles/kitty/ ~/.config/kitty/
+cp -frv ~/Developer/dotfiles/nvim/ ~/.config/
+
+# images
+mkdir -p ~/Pictures/wallpapers/
+cp -frv ~/Developer/dotfiles/images/* ~/Pictures/
