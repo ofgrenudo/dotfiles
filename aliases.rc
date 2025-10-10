@@ -4,6 +4,10 @@ OS_NAME=$(uname -s)
 alias ls="ls -lh --color=auto"
 alias ll="ls -lah --color=auto"
 
+alias gotonotes="cd ~/Documents/kvcc.unorthodoxdev.net/ && nvim ."
+alias note="nvim ~/Documents/kvcc.unorthodoxdev.net/"
+alias notes="nvim ~/Documents/kvcc.unorthodoxdev.net/"
+
 # Networking
 alias wanip="curl ifconfig.me"
 if [[ "$(uname -s)" == "Linux" ]]; then
