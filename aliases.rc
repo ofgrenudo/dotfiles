@@ -4,9 +4,9 @@ OS_NAME=$(uname -s)
 alias ls="ls -lh --color=auto"
 alias ll="ls -lah --color=auto"
 
-alias gotonotes="cd ~/Documents/kvcc.unorthodoxdev.net/ && nvim ."
-alias note="nvim ~/Documents/kvcc.unorthodoxdev.net/"
-alias notes="nvim ~/Documents/kvcc.unorthodoxdev.net/"
+alias gotonotes="cd ~/Developer/docs.unorthodoxdev.net/ && nvim ."
+alias note="nvim ~/Developer/docs.unorthodoxdev.net/"
+alias notes="nvim ~/Developer/docs.unorthodoxdev.net/"
 
 # Networking
 alias wanip="curl ifconfig.me"
@@ -41,3 +41,8 @@ check-system() {
     fi
   fi
 }
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - bash)"
+
