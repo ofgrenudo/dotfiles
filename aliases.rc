@@ -7,6 +7,7 @@ alias ll="ls -lah --color=auto"
 alias gotonotes="cd ~/Developer/docs.unorthodoxdev.net/ && nvim ."
 alias note="nvim ~/Developer/docs.unorthodoxdev.net/"
 alias notes="nvim ~/Developer/docs.unorthodoxdev.net/"
+alias reset_docker="docker stop $(docker ps -q) && docker rm $(docker ps -a -q) && docker volume rm $(docker volume ls -q) && docker network prune -f && docker image prune -a -f"
 
 # Networking
 alias wanip="curl ifconfig.me"
